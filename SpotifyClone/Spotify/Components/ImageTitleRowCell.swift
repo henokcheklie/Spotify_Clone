@@ -2,7 +2,7 @@
 //  ImageTitleRowCell.swift
 //  FirstSwiftApp
 //
-//  Created by APPLE on 28/02/2025.
+//  Created by Henok_Cheklie on 28/02/2025.
 //
 
 import SwiftUI

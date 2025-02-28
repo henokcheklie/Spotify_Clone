@@ -2,7 +2,7 @@
 //  SpotifyHomeView.swift
 //  FirstSwiftApp
 //
-//  Created by APPLE on 25/02/2025.
+//  Created by Henok_Cheklie on 25/02/2025.
 //
 
 import SwiftUI
@@ -24,32 +24,19 @@ struct SpotifyHomeView: View {
                     content:{
                         Section{
                             VStack(spacing: 16){
-                                RecentsSection
+                                RecentsSection.padding(.horizontal,16)
                                 if let product = products.first{
-                                    NewReleaseSection(product:   product)
+                                    NewReleaseSection(product:   product).padding(.horizontal,16)
                                 }
-                                ForEach(products){product in
-                                    ProductRowSection(category: product.title)
-                                }
-                              
-                               
-                               
-                           
-                        }.padding(.horizontal,16)
-                        
-                        
-//                        ForEach(0..<20){_ in
-//                          
-//                            Rectangle().fill(Color.red)
-//                                .frame(width: 200, height: 200)
-//                           
-//                        }
-                    } header: {
-                        Header
-                    }
-                }).padding(.top, 8)
-               
-              
+                                ListRowSection
+                            }
+                    
+                        } header: {
+                            Header
+                        }
+                    }).padding(.top, 8)
+                
+                
             }.scrollIndicators(.hidden).clipped()
         }.task {
             await  getData()
@@ -58,48 +45,48 @@ struct SpotifyHomeView: View {
     
     
     
+
     
-    private   func getData() async{
-        do {
-            currectUser = try await DatabaseHelper().getUsers().first
-            products =  try await Array( DatabaseHelper().getProducts().prefix(8))
-            
-            
-            var row :[ProductRow] = []
-            let allBrands = Set(products.map({ $0.brand }))
-            for brand in allBrands {
-                let products = products.filter({ $0.brand == brand })
-                row.append(ProductRow(title: brand.capitalized, products: products))
-                
-                
-            }
-            
-        }catch{
-            
-        }
-    }
     private var RecentsSection:some View {
         NonLazyVGrid(columns: 2, alignment: .center, spacing: 10,  items: products) { product in
             if let product {
                 SpotifyRecentCell(imageUrl: product.firstImage, title: product.title
-                )
-            }
-        }
-    }
-    
-    private func ProductRowSection(category: String) -> some View{
-       return VStack(alignment: .leading,spacing:8){
-            Text(category).font(.headline).fontWeight(.bold).foregroundStyle(.spotifyWhite).frame(maxWidth:.infinity, alignment: .leading)
-            ScrollView(.horizontal){
-                    HStack(spacing: 16){
-                    ForEach(products){ product in
-                        ImageTitleRowCell(imageName: product.firstImage, title: product.title)
-                    }
+                ).asButton (.press){
+                    
                 }
             }
         }
     }
-    private func NewReleaseSection (product: Product) -> some View {
+    
+    private var ListRowSection:  some View{
+        
+        ForEach(productRow){row in
+            VStack(spacing:8){
+                Text(row.title)
+                    .font(.title)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(.spotifyWhite)
+                    .frame(maxWidth:.infinity, alignment: .leading)
+                    .padding(.horizontal, 16)
+                ScrollView(.horizontal){
+                    HStack(alignment:.top, spacing: 16){
+                        ForEach(row.products){ product in
+                            ImageTitleRowCell(
+                                imageSize:120,
+                                imageName: product.firstImage,
+                                title: product.title)
+                                .asButton (.press){
+                                    
+                                }
+                        }
+                        
+                    }.padding(.horizontal, 16)
+                }.scrollIndicators(.hidden)
+            }
+        }
+    }
+    
+private func NewReleaseSection (product: Product) -> some View {
         return   SpotifyNewReleaseSection(
             imageName: product.firstImage,
             headline: product.brand,
@@ -107,17 +94,15 @@ struct SpotifyHomeView: View {
             tiltle: product.title,
             subtitle:product.description,
             onAddButtonPressed: {
-                
+    
             },
             onPlayButtonPressed: {
                 
             }
         )
-    }
+}
     
-  
-
-    private var Header: some View{
+private var Header: some View{
         
         /////// user profile wiew
         HStack(spacing:0){
@@ -141,6 +126,27 @@ struct SpotifyHomeView: View {
             .scrollIndicators(.hidden)
         }.padding(.vertical, 24).padding(.leading, 8).background(.spotifyBlack)
     }
+
+private func getData() async{
+    do {
+        currectUser = try await DatabaseHelper().getUsers().first
+        products =  try await Array( DatabaseHelper().getProducts().prefix(8))
+        
+        
+        var rows :[ProductRow] = []
+        let allBrands = Set(products.map({ $0.brand }))
+        for brand in allBrands {
+            //                let products = self.products.filter({ $0.brand == brand }) //filter products based on their brand
+            rows.append(ProductRow( title:(brand ?? "Explore").capitalized, products: products))
+            
+            
+        }
+        productRow = rows
+        
+    }catch{
+        
+    }
+  }
 }
 
 #Preview {

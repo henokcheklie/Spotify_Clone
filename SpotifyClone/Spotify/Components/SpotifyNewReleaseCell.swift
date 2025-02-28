@@ -2,7 +2,7 @@
 //  SpotifyNewReleaseSection.swift
 //  FirstSwiftApp
 //
-//  Created by APPLE on 26/02/2025.
+//  Created by Henok_Cheklie on 26/02/2025.
 //
 
 import SwiftUI
