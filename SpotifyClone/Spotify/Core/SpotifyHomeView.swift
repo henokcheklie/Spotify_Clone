@@ -50,6 +50,7 @@ struct SpotifyHomeView: View {
     private var RecentsSection:some View {
         NonLazyVGrid(columns: 2, alignment: .center, spacing: 10,  items: products) { product in
             if let product {
+              
                 SpotifyRecentCell(imageUrl: product.firstImage, title: product.title
                 ).asButton (.press){
                     
@@ -76,7 +77,7 @@ struct SpotifyHomeView: View {
                                 imageName: product.firstImage,
                                 title: product.title)
                                 .asButton (.press){
-                                    
+                                    print(product)
                                 }
                         }
                         
@@ -131,7 +132,6 @@ private func getData() async{
     do {
         currectUser = try await DatabaseHelper().getUsers().first
         products =  try await Array( DatabaseHelper().getProducts().prefix(8))
-        
         
         var rows :[ProductRow] = []
         let allBrands = Set(products.map({ $0.brand }))
