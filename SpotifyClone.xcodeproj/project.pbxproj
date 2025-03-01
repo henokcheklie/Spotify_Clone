@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18159D072D71F8040077A2EE /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 18159D062D71F7FE0077A2EE /* README.md */; };
 		183CC2052D6DB558009401BE /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 183CC2042D6DB558009401BE /* SDWebImageSwiftUI */; };
 		18D01BFF2D6DE1FB00633DFD /* SwiftfulUI in Frameworks */ = {isa = PBXBuildFile; productRef = 18D01BFE2D6DE1FB00633DFD /* SwiftfulUI */; };
 		18D01C012D6DE20000633DFD /* SwiftfulRouting in Frameworks */ = {isa = PBXBuildFile; productRef = 18D01C002D6DE20000633DFD /* SwiftfulRouting */; };
@@ -32,9 +31,9 @@
 
 /* Begin PBXFileReference section */
 		18159D062D71F7FE0077A2EE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		183B57BF2D6DAE9F00D97F4B /* FirstSwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstSwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		183B57D02D6DAEA100D97F4B /* FirstSwiftAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstSwiftAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		183B57DA2D6DAEA100D97F4B /* FirstSwiftAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstSwiftAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		183B57BF2D6DAE9F00D97F4B /* SpotifyClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifyClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		183B57D02D6DAEA100D97F4B /* SpotifyCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpotifyCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		183B57DA2D6DAEA100D97F4B /* SpotifyCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpotifyCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -98,9 +97,9 @@
 		183B57C02D6DAE9F00D97F4B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				183B57BF2D6DAE9F00D97F4B /* FirstSwiftApp.app */,
-				183B57D02D6DAEA100D97F4B /* FirstSwiftAppTests.xctest */,
-				183B57DA2D6DAEA100D97F4B /* FirstSwiftAppUITests.xctest */,
+				183B57BF2D6DAE9F00D97F4B /* SpotifyClone.app */,
+				183B57D02D6DAEA100D97F4B /* SpotifyCloneTests.xctest */,
+				183B57DA2D6DAEA100D97F4B /* SpotifyCloneUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,9 +114,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		183B57BE2D6DAE9F00D97F4B /* FirstSwiftApp */ = {
+		183B57BE2D6DAE9F00D97F4B /* SpotifyClone */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 183B57E42D6DAEA100D97F4B /* Build configuration list for PBXNativeTarget "FirstSwiftApp" */;
+			buildConfigurationList = 183B57E42D6DAEA100D97F4B /* Build configuration list for PBXNativeTarget "SpotifyClone" */;
 			buildPhases = (
 				183B57BB2D6DAE9F00D97F4B /* Sources */,
 				183B57BC2D6DAE9F00D97F4B /* Frameworks */,
@@ -130,19 +129,19 @@
 			fileSystemSynchronizedGroups = (
 				183B57C12D6DAE9F00D97F4B /* SpotifyClone */,
 			);
-			name = FirstSwiftApp;
+			name = SpotifyClone;
 			packageProductDependencies = (
 				183CC2042D6DB558009401BE /* SDWebImageSwiftUI */,
 				18D01BFE2D6DE1FB00633DFD /* SwiftfulUI */,
 				18D01C002D6DE20000633DFD /* SwiftfulRouting */,
 			);
 			productName = FirstSwiftApp;
-			productReference = 183B57BF2D6DAE9F00D97F4B /* FirstSwiftApp.app */;
+			productReference = 183B57BF2D6DAE9F00D97F4B /* SpotifyClone.app */;
 			productType = "com.apple.product-type.application";
 		};
-		183B57CF2D6DAEA100D97F4B /* FirstSwiftAppTests */ = {
+		183B57CF2D6DAEA100D97F4B /* SpotifyCloneTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 183B57E72D6DAEA100D97F4B /* Build configuration list for PBXNativeTarget "FirstSwiftAppTests" */;
+			buildConfigurationList = 183B57E72D6DAEA100D97F4B /* Build configuration list for PBXNativeTarget "SpotifyCloneTests" */;
 			buildPhases = (
 				183B57CC2D6DAEA100D97F4B /* Sources */,
 				183B57CD2D6DAEA100D97F4B /* Frameworks */,
@@ -156,16 +155,16 @@
 			fileSystemSynchronizedGroups = (
 				183B57D32D6DAEA100D97F4B /* SpotifyCloneTests */,
 			);
-			name = FirstSwiftAppTests;
+			name = SpotifyCloneTests;
 			packageProductDependencies = (
 			);
 			productName = FirstSwiftAppTests;
-			productReference = 183B57D02D6DAEA100D97F4B /* FirstSwiftAppTests.xctest */;
+			productReference = 183B57D02D6DAEA100D97F4B /* SpotifyCloneTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		183B57D92D6DAEA100D97F4B /* FirstSwiftAppUITests */ = {
+		183B57D92D6DAEA100D97F4B /* SpotifyCloneUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 183B57EA2D6DAEA100D97F4B /* Build configuration list for PBXNativeTarget "FirstSwiftAppUITests" */;
+			buildConfigurationList = 183B57EA2D6DAEA100D97F4B /* Build configuration list for PBXNativeTarget "SpotifyCloneUITests" */;
 			buildPhases = (
 				183B57D62D6DAEA100D97F4B /* Sources */,
 				183B57D72D6DAEA100D97F4B /* Frameworks */,
@@ -179,11 +178,11 @@
 			fileSystemSynchronizedGroups = (
 				183B57DD2D6DAEA100D97F4B /* SpotifyCloneUITests */,
 			);
-			name = FirstSwiftAppUITests;
+			name = SpotifyCloneUITests;
 			packageProductDependencies = (
 			);
 			productName = FirstSwiftAppUITests;
-			productReference = 183B57DA2D6DAEA100D97F4B /* FirstSwiftAppUITests.xctest */;
+			productReference = 183B57DA2D6DAEA100D97F4B /* SpotifyCloneUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -228,9 +227,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				183B57BE2D6DAE9F00D97F4B /* FirstSwiftApp */,
-				183B57CF2D6DAEA100D97F4B /* FirstSwiftAppTests */,
-				183B57D92D6DAEA100D97F4B /* FirstSwiftAppUITests */,
+				183B57BE2D6DAE9F00D97F4B /* SpotifyClone */,
+				183B57CF2D6DAEA100D97F4B /* SpotifyCloneTests */,
+				183B57D92D6DAEA100D97F4B /* SpotifyCloneUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -264,7 +263,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18159D072D71F8040077A2EE /* README.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,12 +285,12 @@
 /* Begin PBXTargetDependency section */
 		183B57D22D6DAEA100D97F4B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 183B57BE2D6DAE9F00D97F4B /* FirstSwiftApp */;
+			target = 183B57BE2D6DAE9F00D97F4B /* SpotifyClone */;
 			targetProxy = 183B57D12D6DAEA100D97F4B /* PBXContainerItemProxy */;
 		};
 		183B57DC2D6DAEA100D97F4B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 183B57BE2D6DAE9F00D97F4B /* FirstSwiftApp */;
+			target = 183B57BE2D6DAE9F00D97F4B /* SpotifyClone */;
 			targetProxy = 183B57DB2D6DAEA100D97F4B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -417,10 +415,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = FirstSwiftApp/FirstSwiftApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = SpotifyClone/SpotifyClone.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"FirstSwiftApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SpotifyClone/Preview Content\"";
 				DEVELOPMENT_TEAM = YCT96VLH7B;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -440,7 +438,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.7;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Enoch.FirstSwiftApp;
+				PRODUCT_BUNDLE_IDENTIFIER = Enoch.SpotifyClone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
@@ -456,10 +454,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = FirstSwiftApp/FirstSwiftApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = SpotifyClone/SpotifyClone.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"FirstSwiftApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SpotifyClone/Preview Content\"";
 				DEVELOPMENT_TEAM = YCT96VLH7B;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -479,7 +477,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.7;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Enoch.FirstSwiftApp;
+				PRODUCT_BUNDLE_IDENTIFIER = Enoch.SpotifyClone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
@@ -592,7 +590,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		183B57E42D6DAEA100D97F4B /* Build configuration list for PBXNativeTarget "FirstSwiftApp" */ = {
+		183B57E42D6DAEA100D97F4B /* Build configuration list for PBXNativeTarget "SpotifyClone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				183B57E52D6DAEA100D97F4B /* Debug */,
@@ -601,7 +599,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		183B57E72D6DAEA100D97F4B /* Build configuration list for PBXNativeTarget "FirstSwiftAppTests" */ = {
+		183B57E72D6DAEA100D97F4B /* Build configuration list for PBXNativeTarget "SpotifyCloneTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				183B57E82D6DAEA100D97F4B /* Debug */,
@@ -610,7 +608,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		183B57EA2D6DAEA100D97F4B /* Build configuration list for PBXNativeTarget "FirstSwiftAppUITests" */ = {
+		183B57EA2D6DAEA100D97F4B /* Build configuration list for PBXNativeTarget "SpotifyCloneUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				183B57EB2D6DAEA100D97F4B /* Debug */,

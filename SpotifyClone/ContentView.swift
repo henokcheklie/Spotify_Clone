@@ -13,7 +13,9 @@ struct ContentView: View {
     @State private var users: [User] = []
     @State private  var products: [Product] = []
     var body: some View {
-        SpotifyHomeView
+        NavigationView {
+                   SpotifyHomeView() // Calling the SpotifyHomeView inside ContentView
+               }
 //        ScrollView{
 //            VStack {
 //                if users.isEmpty {
@@ -30,7 +32,7 @@ struct ContentView: View {
 //            .task {
 //                await getData()
 //            }
-//        }
+        }
 //    var body: some View {
 //        ScrollView{
 //            VStack {
@@ -51,8 +53,7 @@ struct ContentView: View {
 //        }
 //    
        
-
-    private func getData() async{
+private func getData() async{
         do {
             users = try await DatabaseHelper().getUsers()
             products = try await DatabaseHelper().getProducts()
