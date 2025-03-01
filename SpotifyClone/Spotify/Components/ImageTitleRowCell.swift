@@ -1,6 +1,6 @@
 //
 //  ImageTitleRowCell.swift
-//  FirstSwiftApp
+//  SpotifyClone
 //
 //  Created by Henok_Cheklie on 28/02/2025.
 //

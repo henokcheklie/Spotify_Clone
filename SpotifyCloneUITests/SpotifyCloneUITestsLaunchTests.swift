@@ -1,13 +1,13 @@
 //
-//  FirstSwiftAppUITestsLaunchTests.swift
-//  FirstSwiftAppUITests
+//  SpotifyCloneUITestsLaunchTests.swift
+//  SpotifyCloneUITests
 //
 //  Created by Henok_Cheklie on 25/02/2025.
 //
 
 import XCTest
 
-final class FirstSwiftAppUITestsLaunchTests: XCTestCase {
+final class SpotifyCloneUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

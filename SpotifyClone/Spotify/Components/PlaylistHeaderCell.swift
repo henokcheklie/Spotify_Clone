@@ -2,7 +2,7 @@
 //  PlaylistHeadrCell.swift
 //  SpotifyClone
 //
-//  Created by APPLE on 01/03/2025.
+//  Created by Henok_Cheklie on 01/03/2025.
 //
 
 import SwiftUI

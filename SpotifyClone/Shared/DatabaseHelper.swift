@@ -1,6 +1,6 @@
 //
 //  DatabaseHelper.swift
-//  FirstSwiftApp
+//  SpotifyClone
 //
 //  Created by Henok_Cheklie on 25/02/2025.
 //

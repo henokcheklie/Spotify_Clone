@@ -1,6 +1,6 @@
 //
 //  SpotifyNewReleaseSection.swift
-//  FirstSwiftApp
+//  SpotifyClone
 //
 //  Created by Henok_Cheklie on 26/02/2025.
 //

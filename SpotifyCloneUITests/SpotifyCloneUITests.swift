@@ -1,13 +1,13 @@
 //
-//  FirstSwiftAppUITests.swift
-//  FirstSwiftAppUITests
+//  SpotifyCloneTests.swift
+//  SpotifyCloneUITests
 //
 //  Created by Henok_Cheklie on 25/02/2025.
 //
 
 import XCTest
 
-final class FirstSwiftAppUITests: XCTestCase {
+final class SpotifyCloneUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
