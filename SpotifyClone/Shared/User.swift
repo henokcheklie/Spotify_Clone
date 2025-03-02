@@ -34,7 +34,84 @@ struct User: Codable, Identifiable {
     let ein, ssn, userAgent: String
     let crypto: Crypto
     let role: Role
-}
+
+static var mock : User{
+    User(
+        id: 1,
+        firstName: "Emily",
+        lastName: "Johnson",
+        maidenName: "Smith",
+        age: 28,
+        gender: SpotifyClone.Gender.female,
+        email: "emily.johnson@x.dummyjson.com",
+        phone: "+81 965-431-3024",
+        username: "emilys",
+        password: "emilyspass",
+        birthDate: "1996-5-30",
+        image: "https://dummyjson.com/icon/emilys/128",
+        bloodGroup: "O-",
+        height: 193.24,
+        weight: 63.16,
+        eyeColor: "Green",
+        hair: SpotifyClone
+            .Hair(
+                color: "Brown",
+                type: SpotifyClone.TypeEnum.curly
+            ),
+        ip: "42.48.100.32",
+        address: SpotifyClone
+            .Address(
+                address: "626 Main Street",
+                city: "Phoenix",
+                state: "Mississippi",
+                stateCode: "MS",
+                postalCode: "29112",
+                coordinates: SpotifyClone.Coordinates(
+                    lat: -77.16213,
+                    lng: -92.084824
+                ),
+                country: SpotifyClone.Country.unitedStates
+            ),
+        macAddress: "47:fa:41:18:ec:eb",
+        university: "University of Wisconsin--Madison",
+        bank: SpotifyClone
+            .Bank(
+                cardExpire: "03/26",
+                cardNumber: "9289760655481815",
+                cardType: "Elo",
+                currency: "CNY",
+                iban: "YPUXISOBI7TTHPK2BR3HAIXL"
+            ),
+        company: SpotifyClone
+            .Company(
+                department: "Engineering",
+                name: "Dooley, Kozey and Cronin",
+                title: "Sales Manager",
+                address: SpotifyClone.Address(
+                    address: "263 Tenth Street",
+                    city: "San Francisco",
+                    state: "Wisconsin",
+                    stateCode: "WI",
+                    postalCode: "37657",
+                    coordinates: SpotifyClone.Coordinates(
+                        lat: 71.814525,
+                        lng: -161.150263
+                    ),
+                    country: SpotifyClone.Country.unitedStates
+                )
+            ),
+        ein: "977-175",
+        ssn: "900-590-289",
+        userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36",
+        crypto: SpotifyClone
+            .Crypto(
+                coin: SpotifyClone.Coin.bitcoin,
+                wallet: SpotifyClone.Wallet.the0Xb9Fc2Fe63B2A6C003F1C324C3Bfa53259162181A,
+                network: SpotifyClone.Network.ethereumERC20
+            ),
+        role: SpotifyClone.Role.admin
+    )
+}}
 // MARK: - Address
 struct Address: Codable {
     let address, city, state, stateCode: String

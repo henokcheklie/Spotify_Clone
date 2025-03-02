@@ -110,7 +110,7 @@ private var Header: some View{
             ZStack{
                 if let currectUser {
                     ImageLoaderView(urlString: currectUser.image).background(.spotifyWhite).clipShape(Circle()).onTapGesture {
-                        
+                        print(currectUser)
                     }
                 }
             }.frame(width: 35, height: 35)
