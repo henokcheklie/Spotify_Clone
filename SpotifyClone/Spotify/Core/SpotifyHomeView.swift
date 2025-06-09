@@ -7,8 +7,11 @@
 
 import SwiftUI
 import SwiftfulUI
+import SwiftfulRouting
 
 struct SpotifyHomeView: View {
+    @Environment(\.router) var router
+    
     @State private var currectUser:  User? = nil
     @State private var selectedcategory:  Category? = nil
     @State private var products: [Product] = []
@@ -45,7 +48,13 @@ struct SpotifyHomeView: View {
     
     
     
+    private func goToPlaylistView(product:Product){
+        guard let currectUser else { return }
+        router.showScreen(.push){ _ in
+            SpotifyPlaylistView(product: product, user: currectUser)
+        }
 
+    }
     
     private var RecentsSection:some View {
         NonLazyVGrid(columns: 2, alignment: .center, spacing: 10,  items: products) { product in
@@ -53,7 +62,7 @@ struct SpotifyHomeView: View {
               
                 SpotifyRecentCell(imageUrl: product.firstImage, title: product.title
                 ).asButton (.press){
-                    
+                    goToPlaylistView(product: product)
                 }
             }
         }
@@ -77,7 +86,7 @@ struct SpotifyHomeView: View {
                                 imageName: product.firstImage,
                                 title: product.title)
                                 .asButton (.press){
-                                    print(product)
+                                    goToPlaylistView(product: product)
                                 }
                         }
                         
@@ -98,7 +107,7 @@ private func NewReleaseSection (product: Product) -> some View {
     
             },
             onPlayButtonPressed: {
-                
+                goToPlaylistView(product: product)
             }
         )
 }
@@ -110,7 +119,7 @@ private var Header: some View{
             ZStack{
                 if let currectUser {
                     ImageLoaderView(urlString: currectUser.image).background(.spotifyWhite).clipShape(Circle()).onTapGesture {
-                        print(currectUser)
+                        router.dismissScreen()
                     }
                 }
             }.frame(width: 35, height: 35)
@@ -129,6 +138,7 @@ private var Header: some View{
     }
 
 private func getData() async{
+    guard products.isEmpty else {return}
     do {
         currectUser = try await DatabaseHelper().getUsers().first
         products =  try await Array( DatabaseHelper().getProducts().prefix(8))
@@ -150,5 +160,7 @@ private func getData() async{
 }
 
 #Preview {
-    SpotifyHomeView()
+    RouterView{ _ in
+        SpotifyHomeView()
+    }
 }

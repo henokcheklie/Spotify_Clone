@@ -10,25 +10,28 @@ import SwiftfulUI
 import SwiftfulRouting
 
 struct ContentView: View {
-    @State private var users: [User] = []
-    @State private  var products: [Product] = []
+    
+    @Environment(\.router) var router
+   
     var body: some View {
-        NavigationView {
-            SpotifyHomeView() // Calling the SpotifyHomeView inside ContentView
+        List {
+            Button("Go to Home") {
+                router.showScreen(.fullScreenCover){ _ in
+                    SpotifyHomeView()
+                }
+             
+            }
+            
         }
     }
         
-        private func getData() async{
-            do {
-                users = try await DatabaseHelper().getUsers()
-                products = try await DatabaseHelper().getProducts()
-            } catch {
-            }
-        }
+    
     }
 
 #Preview {
-    ContentView()
+    RouterView {_ in
+        ContentView()
+    }
   }
 
 
